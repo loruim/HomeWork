@@ -5,19 +5,14 @@ def convert(number):
     'Plong', если число number делится на 7,
     само число number, если оно не делится ни на 3, ни на 5, ни на 7."""
     # Напишите ваш код здесь
-    if number % 3 == 0 and number % 5 == 0 and number % 7 == 0:
-        return "PlingPlangPlong"
-    elif number % 3 == 0 and number % 5 == 0:
-        return "PlingPlang"
-    elif number % 3 == 0 and number % 7 == 0:
-        return "PlingPlong"
-    elif number % 5 == 0 and number % 7 == 0:
-        return "PlangPlong"
-    elif number % 3 == 0:
-        return "Pling"
-    elif number % 5 == 0:
-        return "Plang"
-    elif number % 7 == 0:
-        return "Plong"
-    else:
+    s = ''
+    if number % 3 == 0:
+        s += 'Pling'
+    if number % 5 == 0:
+        s += 'Plang'
+    if number % 7 == 0:
+        s += 'Plong'
+    if s == '':
         return str(number)
+    else:
+        return (s)
